@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                               style: new TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 24.0,
-                                  color: Colors.red[100]),
+                                  color: Colors.red[800]),
                             ),
                           ),
                         ),
@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                           },
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
-                              labelText: 'Email',
+                              labelText: 'Matric No/Staff ID',
                               hintText: 'Enter Email'),
                         ),
                       ),
@@ -106,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 50,
                         width: 150,
                         decoration: BoxDecoration(
-                            color: Colors.blue,
+                            color: Colors.blue[300],
                             borderRadius: BorderRadius.circular(20)),
                         child: FlatButton(
                           onPressed: () {
@@ -147,7 +147,7 @@ class _LoginPageState extends State<LoginPage> {
                           },
                           child: Text(
                             'Login',
-                            style: TextStyle(color: Colors.white, fontSize: 20),
+                            style: TextStyle(color: Colors.black, fontSize: 20),
                           ),
                         ),
                       ),
@@ -164,11 +164,11 @@ class _LoginPageState extends State<LoginPage> {
                                       builder: (context) => ResetPage()),
                                 );
                               },
-                              child: Text(
-                                'Forgot Password',
-                                style:
-                                    TextStyle(color: Colors.blue, fontSize: 17),
-                              ),
+                              // child: Text(
+                              //   'Forgot Password',
+                              //   style:
+                              //       TextStyle(color: Colors.blue, fontSize: 17),
+                              // ),
                             ),
                             FlatButton(
                               onPressed: () {
@@ -182,6 +182,7 @@ class _LoginPageState extends State<LoginPage> {
                                 'Register Account',
                                 style:
                                     TextStyle(color: Colors.blue, fontSize: 17),
+                                textAlign: TextAlign.center,
                               ),
                             )
                           ],
