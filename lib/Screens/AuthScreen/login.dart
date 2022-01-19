@@ -28,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
                   Form(
                     child: Column(children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.only(top: 60.0),
+                        padding: const EdgeInsets.only(top: 90.0),
                         child: Center(
                           child: Container(
                             child: new Text(
@@ -180,9 +180,12 @@ class _LoginPageState extends State<LoginPage> {
                               },
                               child: Text(
                                 'Register Account',
-                                style:
-                                    TextStyle(color: Colors.blue, fontSize: 17),
                                 textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.blue,
+                                  fontSize: 17,
+                                  decoration: TextDecoration.underline,
+                                ),
                               ),
                             )
                           ],

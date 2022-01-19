@@ -32,7 +32,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: Column(children: <Widget>[
                         Padding(
                           //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
-                          padding: const EdgeInsets.only(top: 40.0),
+                          padding: const EdgeInsets.only(top: 90.0),
                           child: Center(
                             child: Container(
                               child: new Text(
@@ -41,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 style: new TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 27.0,
-                                    color: Colors.red[800]),
+                                    color: Colors.red[400]),
                               ),
                             ),
                           ),
@@ -62,6 +62,28 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
 
                         Padding(
+                          //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
+                          padding: const EdgeInsets.only(
+                              left: 60.0, right: 60.0, top: 15, bottom: 0),
+                          child: TextFormField(
+                            controller: _username,
+                            keyboardType: TextInputType.text,
+                            textInputAction: TextInputAction.next,
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'Matric No/Staff ID',
+                                hintText: 'Enter valid matric / staff number'),
+                            enabled: true,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Matric No/Staff ID can\'t be empty';
+                              }
+                              return null;
+                            },
+                          ),
+                        ),
+
+                        Padding(
                           padding: const EdgeInsets.only(
                               left: 60.0, right: 60.0, top: 10, bottom: 0),
                           child: TextFormField(
@@ -70,13 +92,13 @@ class _RegisterPageState extends State<RegisterPage> {
                             textInputAction: TextInputAction.next,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(),
-                                labelText: 'Email',
-                                hintText: 'Enter valid email'),
+                                labelText: 'Date of Birth',
+                                hintText: 'Enter valid DOB'),
                             enabled: true,
                             //validator: (value) => Validator.validateField(value: value)
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'email can\'t be empty';
+                                return 'date of birth can\'t be empty';
                               }
                               return null;
                             },
@@ -102,22 +124,22 @@ class _RegisterPageState extends State<RegisterPage> {
                             },
                           ),
                         ),
+
                         Padding(
-                          //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
                           padding: const EdgeInsets.only(
                               left: 60.0, right: 60.0, top: 15, bottom: 0),
                           child: TextFormField(
-                            controller: _username,
+                            controller: _fullname,
                             keyboardType: TextInputType.text,
                             textInputAction: TextInputAction.next,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(),
-                                labelText: 'Username',
-                                hintText: 'Enter valid matric / staff number'),
+                                labelText: 'Email',
+                                hintText: 'Enter valid email'),
                             enabled: true,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'username can\'t be empty';
+                                return 'email can\'t be empty';
                               }
                               return null;
                             },
@@ -155,27 +177,6 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
 
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 60.0, right: 60.0, top: 15, bottom: 20),
-                          child: TextFormField(
-                            controller: _contact,
-                            keyboardType: TextInputType.number,
-                            textInputAction: TextInputAction.next,
-                            decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Contact Number',
-                                hintText: 'Enter valid contact number'),
-                            enabled: true,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'contact number can\'t be empty';
-                              }
-                              return null;
-                            },
-                          ),
-                        ),
-
                         _isProcessiong
                             ? Padding(
                                 padding: EdgeInsets.zero,
@@ -188,7 +189,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 height: 50,
                                 width: 150,
                                 decoration: BoxDecoration(
-                                    color: Colors.blue,
+                                    color: Colors.blue[300],
                                     borderRadius: BorderRadius.circular(20)),
                                 child: FlatButton(
                                   onPressed: () {
@@ -223,9 +224,9 @@ class _RegisterPageState extends State<RegisterPage> {
                                     });
                                   },
                                   child: Text(
-                                    'Register',
+                                    'SIGN UP',
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                                        color: Colors.black, fontSize: 20),
                                   ),
                                 ),
                               ),
@@ -235,14 +236,14 @@ class _RegisterPageState extends State<RegisterPage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              FlatButton(
-                                onPressed: () {},
-                                child: Text(
-                                  'Already have an account?',
-                                  style: TextStyle(
-                                      color: Colors.grey[700], fontSize: 17),
-                                ),
-                              ),
+                              // FlatButton(
+                              //   onPressed: () {},
+                              //   child: Text(
+                              //     'Already have an account?',
+                              //     style: TextStyle(
+                              //         color: Colors.grey[700], fontSize: 17),
+                              //   ),
+                              // ),
                               FlatButton(
                                 onPressed: () {
                                   Navigator.push(
@@ -252,7 +253,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                   );
                                 },
                                 child: Text(
-                                  'Login',
+                                  'Not a student or staff?',
                                   style: TextStyle(
                                     color: Colors.blue,
                                     fontSize: 17,
