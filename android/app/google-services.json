@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969552219896",
+    "project_id": "library-booking-system-7fd5f",
+    "storage_bucket": "library-booking-system-7fd5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969552219896:android:a18e87e88b8dacee4cf50d",
+        "android_client_info": {
+          "package_name": "com.example.library_booking_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969552219896-jqj62csiuseg3ccm3l1imnvb5q46l6cr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAlDbpKH16IvRneMtJGW0wJMps0DMJMHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969552219896-jqj62csiuseg3ccm3l1imnvb5q46l6cr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
