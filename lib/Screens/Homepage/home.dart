@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:library_booking_system/Screens/AuthScreen/login.dart';
 import 'home_body.dart';
@@ -10,10 +9,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String user = FirebaseAuth.instance.currentUser.email == null
-      ? FirebaseAuth.instance.currentUser.phoneNumber
-      : FirebaseAuth.instance.currentUser.email;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

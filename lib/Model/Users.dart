@@ -8,15 +8,17 @@ class UserData {
   final String fullname;
   final String username;
   final String contact;
+  final String email;
 
-  UserData({this.uid, this.fullname, this.username, this.contact});
+  UserData({this.uid, this.fullname, this.username, this.contact, this.email});
 
   factory UserData.fromDatabase(Map<String, dynamic> data) {
     return UserData(
         uid: data['uid'],
         fullname: data['fullname'],
         username: data['username'],
-        contact: data['contact']);
+        contact: data['contact'],
+        email: data['email']);
   }
 
   Map<String, dynamic> toDatabase() {
@@ -24,7 +26,8 @@ class UserData {
       'uid': uid,
       'fullname': fullname,
       'username': username,
-      'contact': contact
+      'contact': contact,
+      'email': email
     };
   }
 

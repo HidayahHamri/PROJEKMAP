@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:library_booking_system/Screens/AuthScreen/login.dart';
 import 'package:library_booking_system/Screens/drawer.dart';
-import 'booking_record.dart';
 
 class Booking extends StatefulWidget {
   @override
@@ -27,7 +26,6 @@ class _BookingState extends State<Booking> {
               })
         ],
       ),
-      body: BookingRecord(),
       drawer: SideDrawer(),
     );
   }
