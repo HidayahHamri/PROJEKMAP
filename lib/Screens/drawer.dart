@@ -33,7 +33,7 @@ class SideDrawer extends StatelessWidget {
           Card(
             child: ListTile(
               leading: Icon(Icons.account_circle_sharp),
-              title: Text('Hello $email'),
+              title: Text('Hello'),
               onTap: () {
                 var firebaseUser = FirebaseAuth.instance.currentUser;
                 FirebaseFirestore.instance

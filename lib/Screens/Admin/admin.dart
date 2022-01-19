@@ -24,7 +24,7 @@ class _AdminPageState extends State<AdminPage> {
               icon: Icon(Icons.exit_to_app),
               onPressed: () {
                 //sign Out User
-                AuthClass().signOut();
+                // AuthClass().signOut();
                 Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(builder: (context) => LoginPage()),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:library_booking_system/Screens/UserProfile/profile_body.dart';
-import 'package:library_booking_system/Services/auth_provider.dart';
 import 'package:library_booking_system/Screens/AuthScreen/login.dart';
 import '../drawer.dart';
 
@@ -20,7 +19,7 @@ class _ProfileState extends State<Profile> {
               icon: Icon(Icons.exit_to_app),
               onPressed: () {
                 //sign Out User
-                AuthClass().signOut();
+                //AuthClass().signOut();
                 Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(builder: (context) => LoginPage()),

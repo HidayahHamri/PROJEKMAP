@@ -1,10 +1,9 @@
-import 'package:library_booking_system/Services/auth_provider.dart';
 import 'package:flutter/material.dart';
 
 class Provider extends InheritedWidget {
-  final AuthClass auth;
+  //final AuthClass auth;
 
-  Provider({Key key, Widget child, this.auth}) : super(key: key, child: child);
+  //Provider({Key key, Widget child, this.auth}) : super(key: key, child: child);
 
   @override
   bool updateShouldNotify(InheritedWidget oldWidget) {

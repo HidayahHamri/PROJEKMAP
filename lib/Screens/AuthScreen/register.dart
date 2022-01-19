@@ -196,40 +196,39 @@ class _RegisterPageState extends State<RegisterPage> {
                                     setState(() {
                                       isLoading = true;
                                     });
-                                    AuthClass()
-                                        .createAccount(
-                                            _email.text.trim(),
-                                            _password.text.trim(),
-                                            _fullname.text.trim(),
-                                            _username.text.trim(),
-                                            _contact.text.trim())
-                                        .then((value) {
-                                      if (value == null) {
-                                        setState(() {
-                                          isLoading = false;
-                                        });
-                                      } else {
-                                        setState(() {
-                                          isLoading = false;
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      LoginPage()));
-                                        });
-                                        ScaffoldMessenger.of(context)
-                                            .showSnackBar(
-                                                SnackBar(content: Text(value)));
-                                      }
-                                    });
-                                  },
+                                   // AuthClass()
+                                  //       createAccount(
+                                  //           _email.text.trim(),
+                                  //           _password.text.trim(),
+                                  //           _fullname.text.trim(),
+                                  //           _username.text.trim(),
+                                  //           _contact.text.trim())
+                                  //       .then((value) {
+                                  //     if (value == null) {
+                                  //       setState(() {
+                                  //         isLoading = false;
+                                  //       });
+                                  //     } else {
+                                  //       setState(() {
+                                  //         isLoading = false;
+                                  //         Navigator.push(
+                                  //             context,
+                                  //             MaterialPageRoute(
+                                  //                 builder: (context) =>
+                                  //                     LoginPage()));
+                                  //       });
+                                  //       ScaffoldMessenger.of(context)
+                                  //           .showSnackBar(
+                                  //               SnackBar(content: Text(value)));
+                                  //     }
+                                  //   });
+                                  // },
                                   child: Text(
                                     'SIGN UP',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 20),
-                                  ),
-                                ),
-                              ),
+                                  );
+                            
 
                         Container(
                           alignment: Alignment.center,
@@ -263,18 +262,11 @@ class _RegisterPageState extends State<RegisterPage> {
                               )
                             ],
                           ),
-                        ),
+                        );})),]))])))}}
 
                         // SizedBox(
                         //   height: 130,
                         // ),,
                         // ),
                         // Text('New User? Create Account')
-                      ]),
-                    ),
-                  ],
-                ),
-              )
-            : Center(child: CircularProgressIndicator()));
-  }
-}
+        

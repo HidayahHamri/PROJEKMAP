@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:library_booking_system/Screens/AuthScreen/login.dart';
 import 'package:library_booking_system/Screens/drawer.dart';
-import 'package:library_booking_system/Services/auth_provider.dart';
 import 'booking_record.dart';
 
 class Booking extends StatefulWidget {
@@ -20,7 +19,7 @@ class _BookingState extends State<Booking> {
               icon: Icon(Icons.exit_to_app),
               onPressed: () {
                 //sign Out User
-                AuthClass().signOut();
+                //AuthClass().signOut();
                 Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(builder: (context) => LoginPage()),

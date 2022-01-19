@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:library_booking_system/Services/auth_provider.dart';
 import 'package:library_booking_system/Screens/AuthScreen/login.dart';
 import 'package:library_booking_system/Screens/drawer.dart';
 import 'meeting_room.dart';
@@ -25,7 +24,7 @@ class _MeetingState extends State<Meeting> {
               icon: Icon(Icons.exit_to_app),
               onPressed: () {
                 //sign Out User
-                AuthClass().signOut();
+                //AuthClass().signOut();
                 Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(builder: (context) => LoginPage()),

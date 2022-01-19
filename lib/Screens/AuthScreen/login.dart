@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:library_booking_system/Services/auth_provider.dart';
+
 import 'package:library_booking_system/Screens/AuthScreen/register.dart';
 
 class LoginPage extends StatefulWidget {
@@ -107,47 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                             borderRadius: BorderRadius.circular(20)),
                         child: FlatButton(
                           onPressed: () {
-                            setState(() {
-                              isLoading = true;
-                            });
-                            AuthClass()
-                                .signIN(
-                                    email: _email.text.trim(),
-                                    password: _password.text.trim())
-                                .then((value) {
-                              if (value == "Welcome") {
-                                setState(() {
-                                  isLoading = false;
-                                });
-                                //   Navigator.pushAndRemoveUntil(
-                                //       context,
-                                //       MaterialPageRoute(
-                                //           builder: (context) => HomePage()),
-                                //       (route) => false);
-                                // } else if (value == "Admin") {
-                                //   setState(() {
-                                //     isLoading = false;
-                                //   });
-                                //   Navigator.pushAndRemoveUntil(
-                                //       context,
-                                //       MaterialPageRoute(
-                                //           builder: (context) => AdminPage()),
-                                //       (route) => false);
-                                // } else {
-                                //   setState(() {
-                                //     isLoading = false;
-                                //   });
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(content: Text(value)));
-                              }
-                            });
-                          },
-                          child: Text(
-                            'Login',
-                            style: TextStyle(color: Colors.black, fontSize: 20),
-                          ),
-                        ),
-                      ),
+           
                       Container(
                         alignment: Alignment.center,
                         child: Row(
@@ -187,15 +147,8 @@ class _LoginPageState extends State<LoginPage> {
                             )
                           ],
                         ),
-                      ),
-                    ]),
-                  ),
-                ],
-              ),
-            )
-          : Center(
-              child: CircularProgressIndicator(),
-            ),
-    );
-  }
-}
+                      );})),]),)])))}}
+         
+          // : Center(
+          //     child: CircularProgressIndicator(),
+          //   ),
