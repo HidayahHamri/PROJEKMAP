@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:library_booking_system/Services/auth_provider.dart';
 import 'package:library_booking_system/Screens/AuthScreen/register.dart';
-import 'package:library_booking_system/Screens/AuthScreen/reset.dart';
-import 'package:library_booking_system/Screens/Admin/admin.dart';
-import '../Homepage/home.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -122,24 +119,24 @@ class _LoginPageState extends State<LoginPage> {
                                 setState(() {
                                   isLoading = false;
                                 });
-                                Navigator.pushAndRemoveUntil(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => HomePage()),
-                                    (route) => false);
-                              } else if (value == "Admin") {
-                                setState(() {
-                                  isLoading = false;
-                                });
-                                Navigator.pushAndRemoveUntil(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => AdminPage()),
-                                    (route) => false);
-                              } else {
-                                setState(() {
-                                  isLoading = false;
-                                });
+                                //   Navigator.pushAndRemoveUntil(
+                                //       context,
+                                //       MaterialPageRoute(
+                                //           builder: (context) => HomePage()),
+                                //       (route) => false);
+                                // } else if (value == "Admin") {
+                                //   setState(() {
+                                //     isLoading = false;
+                                //   });
+                                //   Navigator.pushAndRemoveUntil(
+                                //       context,
+                                //       MaterialPageRoute(
+                                //           builder: (context) => AdminPage()),
+                                //       (route) => false);
+                                // } else {
+                                //   setState(() {
+                                //     isLoading = false;
+                                //   });
                                 ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(content: Text(value)));
                               }
@@ -157,19 +154,19 @@ class _LoginPageState extends State<LoginPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             FlatButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ResetPage()),
-                                );
-                              },
-                              // child: Text(
-                              //   'Forgot Password',
-                              //   style:
-                              //       TextStyle(color: Colors.blue, fontSize: 17),
-                              // ),
-                            ),
+                                // onPressed: () {
+                                //   Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => ResetPage()),
+                                //   );
+                                // },
+                                // child: Text(
+                                //   'Forgot Password',
+                                //   style:
+                                //       TextStyle(color: Colors.blue, fontSize: 17),
+                                // ),
+                                ),
                             FlatButton(
                               onPressed: () {
                                 Navigator.push(
