@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -17,124 +15,126 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: isLoading == false
-          ? SingleChildScrollView(
-              child: Column(
-                children: [
-                  Form(
-                    child: Column(children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(top: 90.0),
-                        child: Center(
-                          child: Container(
-                            child: new Text(
-                              'UTM Sports Hall Booking System',
-                              textAlign: TextAlign.center,
-                              style: new TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 24.0,
-                                  color: Colors.red[800]),
-                            ),
+        backgroundColor: Colors.white,
+        body: isLoading == false
+            ? SingleChildScrollView(
+                child: Column(children: [
+                Form(
+                  child: Column(children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(top: 90.0),
+                      child: Center(
+                        child: Container(
+                          child: new Text(
+                            'UTM Sports Hall Booking System',
+                            textAlign: TextAlign.center,
+                            style: new TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 24.0,
+                                color: Colors.red[800]),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 60.0),
-                        child: Center(
-                          child: Container(
-                              width: 500,
-                              height: 150,
-                              child: Image.asset('Images/Logo.png')),
-                        ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 60.0),
+                      child: Center(
+                        child: Container(
+                            width: 500,
+                            height: 150,
+                            child: Image.asset('Images/Logo.png')),
                       ),
-                      Padding(
-                        //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
-                        padding: const EdgeInsets.only(
-                            left: 60.0, right: 60.0, top: 50, bottom: 0),
-                        child: TextFormField(
-                          controller: _email,
-                          keyboardType: TextInputType.text,
-                          textInputAction: TextInputAction.done,
-                          validator: (text) {
-                            if (text == null || text.isEmpty) {
-                              return 'email is empty';
-                            }
-                            return null;
-                          },
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Matric No/Staff ID',
-                              hintText: 'Enter Email'),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 60.0, right: 60.0, top: 15, bottom: 40),
-                        //padding: EdgeInsets.symmetric(horizontal: 15),
-                        child: TextFormField(
-                          controller: _password,
-                          keyboardType: TextInputType.text,
-                          textInputAction: TextInputAction.done,
-                          validator: (text) {
-                            if (text == null || text.isEmpty) {
-                              return 'password is empty';
-                            }
-                            return null;
-                          },
-                          obscureText: _isObscure,
-                          decoration: InputDecoration(
+                    ),
+                    Padding(
+                      //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
+                      padding: const EdgeInsets.only(
+                          left: 60.0, right: 60.0, top: 50, bottom: 0),
+                      child: TextFormField(
+                        controller: _email,
+                        keyboardType: TextInputType.text,
+                        textInputAction: TextInputAction.done,
+                        validator: (text) {
+                          if (text == null || text.isEmpty) {
+                            return 'email is empty';
+                          }
+                          return null;
+                        },
+                        decoration: InputDecoration(
                             border: OutlineInputBorder(),
-                            labelText: 'Password',
-                            hintText: 'Enter Password',
-                            suffixIcon: IconButton(
-                                icon: Icon(_isObscure
-                                    ? Icons.visibility
-                                    : Icons.visibility_off),
-                                onPressed: () {
-                                  setState(() {
-                                    _isObscure = !_isObscure;
-                                  });
-                                }),
-                          ),
+                            labelText: 'Matric No/Staff ID',
+                            hintText: 'Enter Email'),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 60.0, right: 60.0, top: 15, bottom: 40),
+                      //padding: EdgeInsets.symmetric(horizontal: 15),
+                      child: TextFormField(
+                        controller: _password,
+                        keyboardType: TextInputType.text,
+                        textInputAction: TextInputAction.done,
+                        validator: (text) {
+                          if (text == null || text.isEmpty) {
+                            return 'password is empty';
+                          }
+                          return null;
+                        },
+                        obscureText: _isObscure,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Password',
+                          hintText: 'Enter Password',
+                          suffixIcon: IconButton(
+                              icon: Icon(_isObscure
+                                  ? Icons.visibility
+                                  : Icons.visibility_off),
+                              onPressed: () {
+                                setState(() {
+                                  _isObscure = !_isObscure;
+                                });
+                              }),
                         ),
                       ),
-                      Container(
+                    ),
+                    Container(
                         height: 50,
                         width: 150,
                         decoration: BoxDecoration(
                             color: Colors.blue[300],
                             borderRadius: BorderRadius.circular(20)),
+                        // ignore: deprecated_member_use
                         child: FlatButton(
                           onPressed: () {
-           
-                      Container(
-                        alignment: Alignment.center,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            FlatButton(
-                              onPressed: () {
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(
-                                //       builder: (context) => RegisterPage()),
-                                // );
-                              },
-                              child: Text(
-                                'Register Account',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.blue,
-                                  fontSize: 17,
-                                  decoration: TextDecoration.underline,
-                                ),
+                            Container(
+                              alignment: Alignment.center,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  // ignore: deprecated_member_use
+                                  FlatButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      'Register Account',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        fontSize: 17,
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                  )
+                                ],
                               ),
-                            )
-                          ],
-                        ),
-  );})),]),)])))}}
-                      
+                            );
+                          },
+                          child: null,
+                        )),
+                  ]),
+                )
+              ]))
+            : LoginPage());
+  }
+}
          
           // : Center(
           //     child: CircularProgressIndicator(),
