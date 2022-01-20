@@ -8,19 +8,6 @@ void main() async {
   runApp(App());
 }
 
-// class App extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return StreamProvider<List<Users>>(
-//      // value: AuthClass().user,
-//       initialData: <Users>[],
-//       child: MaterialApp(
-//         home: Home(),
-//       ),
-//     );
-//   }
-// }
-
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

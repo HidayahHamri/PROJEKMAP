@@ -114,20 +114,6 @@ class _LoginPageState extends State<LoginPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             FlatButton(
-                                // onPressed: () {
-                                //   Navigator.push(
-                                //     context,
-                                //     MaterialPageRoute(
-                                //         builder: (context) => ResetPage()),
-                                //   );
-                                // },
-                                // child: Text(
-                                //   'Forgot Password',
-                                //   style:
-                                //       TextStyle(color: Colors.blue, fontSize: 17),
-                                // ),
-                                ),
-                            FlatButton(
                               onPressed: () {
                                 Navigator.push(
                                   context,
