@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:library_booking_system/Model/Users.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,15 +9,7 @@ void main() async {
 
 class App extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return StreamProvider<Users>.value(
-      initialData: Users(),
-      child: MaterialApp(
-        theme: ThemeData(backgroundColor: Colors.lightBlue),
-        home: Home(),
-      ),
-    );
-  }
+  Widget build(BuildContext context) {}
 }
 
 class Home extends StatefulWidget {
