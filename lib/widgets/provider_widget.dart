@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Provider extends InheritedWidget {
-  //final AuthClass auth;
-
-  //Provider({Key key, Widget child, this.auth}) : super(key: key, child: child);
-
   @override
   bool updateShouldNotify(InheritedWidget oldWidget) {
     return true;
