@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:library_booking_system/Screens/AuthScreen/register.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -115,11 +115,11 @@ class _LoginPageState extends State<LoginPage> {
                           children: <Widget>[
                             FlatButton(
                               onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => RegisterPage()),
-                                );
+                                // Navigator.push(
+                                //   context,
+                                //   MaterialPageRoute(
+                                //       builder: (context) => RegisterPage()),
+                                // );
                               },
                               child: Text(
                                 'Register Account',
@@ -133,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                             )
                           ],
                         ),
-  );})),]),)])));
+  );})),]),)])))}}
                       
          
           // : Center(
